@@ -1,223 +1,100 @@
 # Advanced Orderbook System
 
-A high-performance, feature-rich orderbook implementation with advanced trading capabilities, risk management, and market analysis tools. Designed for institutional-grade trading systems, this orderbook provides the foundation for building sophisticated electronic trading platforms, market making systems, and algorithmic trading strategies.
+A high-performance electronic trading system featuring sophisticated order management, advanced order types, and machine learning capabilities.
 
 ## Overview
 
-This system represents a comprehensive solution for electronic trading, combining high-performance order matching with advanced risk management and market analysis capabilities. Whether you're building a market making system, implementing algorithmic trading strategies, or developing a full-featured exchange, this orderbook provides the core functionality needed for modern electronic trading.
+This system implements a state-of-the-art orderbook with advanced features designed for high-frequency trading and market making. It provides robust order management, sophisticated order types, and intelligent execution strategies powered by machine learning.
 
-## Features
+## Key Features
 
-### Core Orderbook
-The heart of the system is a high-performance matching engine that processes orders with sub-microsecond latency. This component is designed for maximum throughput while maintaining strict ordering guarantees and thread safety.
+### 1. Advanced Order Types
+- **Smart Order Types**:
+  - Iceberg Orders: Large orders split into smaller visible chunks
+  - TWAP Orders: Time-weighted average price execution
+  - VWAP Orders: Volume-weighted average price execution
+  - Smart Split Orders: Intelligent order splitting based on market conditions
+  - Adaptive Orders: Self-adjusting orders that adapt to market conditions
 
-- **High-Performance Matching Engine**
-  - Lock-free data structures for optimal performance
-  - O(1) order insertion and cancellation
-  - Efficient price level management
-  - Thread-safe operations
-  - Real-time order matching
+- **Conditional Orders**:
+  - Stop Loss Orders: Automatically execute at specified price levels
+  - Take Profit Orders: Secure profits at target price levels
+  - Trailing Stop Orders: Dynamic stop loss that follows price movement
+  - OCO Orders: One-Cancels-Other orders for complex trading strategies
+  - Pegged Orders: Orders that track market prices with custom offsets
 
-The system supports a wide range of order types, from basic market and limit orders to sophisticated conditional orders and complex trading strategies. Each order type is implemented with careful consideration for performance and reliability.
+### 2. Smart Order Router
+- **Multi-Venue Execution**:
+  - Intelligent order splitting across multiple venues
+  - Dynamic venue selection based on multiple factors
+  - Risk-aware venue allocation
+  - Real-time venue performance tracking
 
-- **Advanced Order Types**
-  - Market Orders
-  - Limit Orders
-  - Stop-Loss Orders
-  - Take-Profit Orders
-  - Trailing Stop Orders
-  - OCO (One-Cancels-Other) Orders
-  - Pegged Orders
-  - Market-on-Close Orders
-  - Spread Orders
-  - Straddle Orders
+- **Machine Learning Integration**:
+  - Venue-specific ML models for performance prediction
+  - Strategy-level ML model for overall optimization
+  - Adaptive model updates based on execution data
+  - Feature importance analysis
 
-### Risk Management
-Risk management is a critical component of any trading system. Our implementation provides comprehensive risk controls and monitoring capabilities, helping to protect against market, credit, and operational risks.
+### 3. Market Impact Analysis
+- **Impact Modeling**:
+  - Temporary and permanent impact analysis
+  - Market regime classification
+  - Impact prediction using ML models
+  - Cost and risk analysis
 
-- **Advanced Risk Model**
-  - Multi-factor risk analysis
-  - Value at Risk (VaR) calculation
-  - Conditional VaR (CVaR)
-  - Stress testing and scenario analysis
-  - Monte Carlo simulation
-  - Historical simulation
-  - Risk decomposition
-  - Real-time risk monitoring
-  - Risk limit enforcement
-  - Risk-adjusted performance metrics
-
-The system considers multiple risk factors that can affect trading operations, providing a holistic view of potential risks and their implications.
-
-- **Risk Factors**
-  - Market Risk
-  - Credit Risk
-  - Liquidity Risk
-  - Operational Risk
-  - Counterparty Risk
-  - Concentration Risk
-  - Correlation Risk
-  - Tail Risk
-  - Systemic Risk
-  - Regulatory Risk
-
-### Smart Order Routing
-Modern trading often involves multiple venues and complex routing decisions. Our smart order router uses machine learning to optimize order routing decisions based on historical data and real-time market conditions.
-
-- **Machine Learning-Based Router**
-  - Historical data analysis
-  - Feature extraction
-  - Real-time venue selection
-  - Performance optimization
-  - Model persistence
-  - Adaptive learning
-
-The routing system considers various factors to ensure optimal execution, including latency, cost, and fill probability.
-
-- **Routing Features**
-  - Latency optimization
-  - Cost minimization
-  - Fill rate maximization
+- **Execution Optimization**:
+  - Optimal execution time calculation
   - Smart order splitting
-  - Venue selection
-  - Execution quality analysis
+  - Impact-aware execution strategies
+  - Real-time adaptation to market conditions
 
-### Market Impact Analysis
-Understanding and managing market impact is crucial for large orders. Our sophisticated impact model helps traders optimize their execution strategy to minimize market impact and trading costs.
+### 4. Risk Management
+- **Position Management**:
+  - Position limits and exposure tracking
+  - Real-time P&L monitoring
+  - Value-at-Risk (VaR) calculations
+  - Stress testing capabilities
 
-- **Sophisticated Impact Model**
-  - Temporary impact calculation
-  - Permanent impact analysis
-  - Market regime consideration
-  - Liquidity factor analysis
-  - Impact decomposition
-  - Cost optimization
-  - Model calibration
-  - Real-time impact prediction
-
-### Order Book Analysis
-The system provides comprehensive tools for analyzing order book state and market microstructure, helping traders make informed decisions.
-
-- **Comprehensive Analysis Tools**
-  - Order book reconstruction
-  - State validation
-  - Trade analysis
-  - Market impact calculation
-  - Fill probability estimation
-  - Expected slippage analysis
-  - Price level analysis
-  - Order flow analysis
-
-### Market Data Analysis
-Advanced market data analysis capabilities help identify trading opportunities and market patterns.
-
-- **Advanced Analytics**
-  - Technical indicators
-  - Pattern recognition
-  - Market regime detection
-  - Volume analysis
-  - Statistical analysis
-  - Fourier analysis
-  - Time series decomposition
-  - Anomaly detection
-  - Performance metrics
-
-The system includes a comprehensive set of technical indicators and pattern recognition tools for market analysis.
-
-- **Technical Indicators**
-  - Simple Moving Average (SMA)
-  - Exponential Moving Average (EMA)
-  - Relative Strength Index (RSI)
-  - Moving Average Convergence Divergence (MACD)
-  - Bollinger Bands
-  - Volume Profile
-  - Momentum Indicators
-
-Pattern recognition capabilities help identify common chart patterns and market structures.
-
-- **Pattern Recognition**
-  - Double Top/Bottom
-  - Head and Shoulders
-  - Triangle Patterns
-  - Breakout Detection
-  - Reversal Detection
-
-Advanced statistical analysis tools provide deeper insights into market behavior.
-
-- **Statistical Analysis**
-  - Volatility calculation
-  - Correlation analysis
-  - Autocorrelation
-  - Skewness
-  - Kurtosis
-  - Power spectrum analysis
-
-### Performance Monitoring
-Real-time monitoring and analysis of trading performance is essential for optimizing strategies and managing risk.
-
-- **Real-time Metrics**
-  - Order execution time
-  - Price improvement
+- **Risk Controls**:
+  - Price deviation limits
+  - Size constraints
+  - Time-based controls
+  - Impact monitoring
   - Slippage tracking
-  - Market impact measurement
-  - Fill rate analysis
-  - Cost analysis
-  - Performance attribution
-
-### Market Making
-The system includes sophisticated market making capabilities, helping traders maintain liquidity while managing risk.
-
-- **Advanced Strategies**
-  - Spread-based market making
-  - Inventory management
-  - Risk-adjusted quoting
-  - Dynamic spread adjustment
-  - Position limits
-  - Profit optimization
 
 ## Technical Details
 
 ### Architecture
-Built with modern C++ and focused on performance, the system uses advanced programming techniques and data structures to achieve high throughput and low latency.
-
-- Modern C++ (C++17)
-- Lock-free data structures
-- Thread-safe operations
-- Real-time processing
-- Modular design
-- Extensible framework
-
-### Dependencies
-The system is designed to be flexible, with optional dependencies for enhanced functionality.
-
-- Standard C++ Library
-- Threading support
-- Optional: CUDA for GPU acceleration
-- Optional: PyTorch for machine learning
-
-### Performance
-Performance is a key focus of the system, with optimizations at every level.
-
-- Sub-microsecond order processing
-- High throughput matching engine
+- C++17 implementation for maximum performance
+- Thread-safe design for concurrent operations
+- Lock-free data structures where applicable
 - Efficient memory management
-- Optimized data structures
-- Real-time analytics
+- Real-time processing capabilities
 
-## Getting Started
+### Performance Optimization
+- SIMD instructions for calculations
+- GPU acceleration for ML models
+- Optimized data structures
+- Efficient memory allocation
+- Low-latency execution
+
+### Machine Learning Integration
+- Neural Networks for impact prediction
+- Gradient Boosting for strategy optimization
+- Feature engineering for market data
+- Real-time model updates
+- Performance monitoring
+
+## Building and Running
 
 ### Prerequisites
-To build and run the system, you'll need the following tools and libraries.
+- C++17 compatible compiler
+- CMake 3.15 or higher
+- Eigen library for linear algebra
+- CUDA toolkit (optional, for GPU acceleration)
 
-- C++17 compliant compiler
-- CMake 3.10 or higher
-- Threading support
-- Optional: CUDA toolkit
-- Optional: PyTorch
-
-### Building
-Follow these steps to build the system:
-
+### Build Instructions
 ```bash
 mkdir build
 cd build
@@ -226,71 +103,57 @@ make
 ```
 
 ### Running Tests
-The system includes a comprehensive test suite to verify functionality:
-
 ```bash
 ./orderbook_test
 ```
 
-### Example Usage
-Here's a basic example of how to use the system in your trading application:
+## Usage Examples
 
+### Creating an Advanced Order
 ```cpp
-#include "Orderbook.h"
-#include "RiskManager.h"
-#include "PerformanceMonitor.h"
-#include "SmartOrderRouter.h"
-#include "MarketDataAnalyzer.h"
+AdvancedOrderTypes::OrderConfig config;
+config.type = AdvancedOrderTypes::OrderType::Iceberg;
+config.params.totalQuantity = 1000;
+config.params.price = 100.0;
+config.params.minQuantity = 100;
+config.params.maxQuantity = 200;
+config.params.timeInterval = 3600; // 1 hour
+config.params.volumeTarget = 10000;
+config.params.priceDeviation = 0.01;
+config.params.urgency = 0.5;
 
-int main() {
-    // Initialize components
-    Orderbook orderbook;
-    RiskManager riskManager;
-    PerformanceMonitor performanceMonitor;
-    SmartOrderRouter router;
-    MarketDataAnalyzer analyzer;
+auto order = advancedOrderTypes.CreateOrder(config);
+```
 
-    // Configure components
-    riskManager.setRiskLimits(/* ... */);
-    router.setRoutingConfig(/* ... */);
-    analyzer.setAnalysisConfig(/* ... */);
-
-    // Process orders
-    while (true) {
-        // Receive order
-        Order order = receiveOrder();
-
-        // Validate order
-        if (!riskManager.validateOrder(order)) {
-            rejectOrder(order);
-            continue;
-        }
-
-        // Route order
-        if (router.routeOrder(order)) {
-            // Process order
-            orderbook.processOrder(order);
-            
-            // Update metrics
-            performanceMonitor.updateMetrics(order);
-            
-            // Analyze market data
-            analyzer.updateMarketData(order);
-        }
-    }
-
-    return 0;
+### Smart Order Routing
+```cpp
+SmartOrderRouter::RoutingDecision decision = router.RouteOrder(order);
+for (size_t i = 0; i < decision.targetVenues.size(); ++i) {
+    std::cout << "Venue: " << decision.targetVenues[i] 
+              << ", Size: " << decision.orderSizes[i] 
+              << ", Weight: " << decision.venueWeights[i] << std::endl;
 }
 ```
 
+## Performance Metrics
+
+The system is designed to achieve:
+- Sub-millisecond order processing
+- Microsecond-level market data handling
+- Real-time ML model updates
+- Efficient memory usage
+- Scalable architecture
+
 ## Contributing
-We welcome contributions from the community! Whether you're fixing bugs, adding features, or improving documentation, your help is appreciated. Please feel free to submit a Pull Request.
+
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details. This permissive license allows you to use the code in both open-source and commercial projects.
+
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
+
+- Thanks to the Eigen library for linear algebra operations
 - Inspired by modern electronic trading systems
-- Built with performance and reliability in mind
-- Designed for real-world trading applications
-- Special thanks to the open-source community for their invaluable contributions to the field of electronic trading 
+- Built with performance and reliability in mind 
