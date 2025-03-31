@@ -2,9 +2,15 @@
 
 enum class OrderType
 {
-	GoodTillCancel,
-	FillAndKill,
-	FillOrKill,
-	GoodForDay,
 	Market,
+	Limit,
+	GoodTillCancel,
+	StopLoss,
+	TakeProfit,
+	TrailingStop,
+	OCO,
+	Pegged,
+	MarketOnClose,
+	Spread,
+	Straddle
 };
