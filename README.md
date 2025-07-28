@@ -1,10 +1,10 @@
 # Advanced Orderbook System
 
-A high-performance electronic trading system featuring sophisticated order management, advanced order types, and machine learning capabilities.
+A high-performance electronic trading system featuring sophisticated order management, advanced order types, and data collection for predictive modeling.
 
 ## Overview
 
-This system implements a state-of-the-art orderbook with advanced features designed for high-frequency trading and market making. It provides robust order management, sophisticated order types, and intelligent execution strategies powered by machine learning.
+This system implements a state-of-the-art orderbook with advanced features designed for high-frequency trading and market making. It provides robust order management, sophisticated order types, and collects data to be used for predictive modeling.
 
 ## Key Features
 
@@ -29,12 +29,6 @@ This system implements a state-of-the-art orderbook with advanced features desig
   - Dynamic venue selection based on multiple factors
   - Risk-aware venue allocation
   - Real-time venue performance tracking
-
-- **Machine Learning Integration**:
-  - Venue-specific ML models for performance prediction
-  - Strategy-level ML model for overall optimization
-  - Adaptive model updates based on execution data
-  - Feature importance analysis
 
 ### 3. Market Impact Analysis
 - **Impact Modeling**:
@@ -63,6 +57,18 @@ This system implements a state-of-the-art orderbook with advanced features desig
   - Impact monitoring
   - Slippage tracking
 
+### 5. Data Collection for Predictive Modeling
+- **Comprehensive Data Logging**:
+  - Detailed records of all order actions (add, cancel, modify, fill)
+  - High-resolution market data snapshots (order book depth, trades)
+  - Execution data, including venue, price, and latency
+- **Feature Engineering**:
+  - Extraction of meaningful features from raw data
+  - Calculation of various market indicators (e.g., volatility, liquidity)
+- **Model Training and Evaluation**:
+  - Framework for training and testing predictive models
+  - Backtesting capabilities to evaluate model performance
+
 ## Technical Details
 
 ### Architecture
@@ -80,11 +86,8 @@ This system implements a state-of-the-art orderbook with advanced features desig
 - Low-latency execution
 
 ### Machine Learning Integration
-- Neural Networks for impact prediction
-- Gradient Boosting for strategy optimization
-- Feature engineering for market data
-- Real-time model updates
-- Performance monitoring
+- Data collection for training predictive models (e.g., market impact, price prediction)
+- Framework for feature engineering and model evaluation
 
 ## Building and Running
 
@@ -140,7 +143,6 @@ for (size_t i = 0; i < decision.targetVenues.size(); ++i) {
 The system is designed to achieve:
 - Sub-millisecond order processing
 - Microsecond-level market data handling
-- Real-time ML model updates
 - Efficient memory usage
 - Scalable architecture
 
@@ -156,4 +158,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - Thanks to the Eigen library for linear algebra operations
 - Inspired by modern electronic trading systems
-- Built with performance and reliability in mind 
+- Built with performance and reliability in mind

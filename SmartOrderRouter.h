@@ -6,7 +6,6 @@
 #include <string>
 #include <chrono>
 #include "Usings.h"
-#include "MLModel.h"
 
 class SmartOrderRouter {
 public:
@@ -20,7 +19,6 @@ public:
         double volume;
         double reliability;
         std::vector<double> historicalPerformance;
-        MLModel::TrainingMetrics mlMetrics;
     };
 
     // Routing decision
@@ -104,12 +102,6 @@ private:
     void CalculateStrategyPerformance();
     void UpdateVenuePerformance(const std::string& venue, double performance);
     
-    // ML model helpers
-    void InitializeMLModels();
-    void UpdateMLModels();
-    double PredictVenuePerformance(const std::string& venue, 
-                                 const OrderPointer& order) const;
-    
     // Internal state
     std::map<std::string, VenueInfo> venues_;
     std::map<std::string, double> riskLimits_;
@@ -119,12 +111,7 @@ private:
     std::string currentStrategy_;
     std::chrono::system_clock::time_point lastUpdate_;
     
-    // ML models
-    std::map<std::string, std::unique_ptr<MLModel>> venueModels_;
-    std::unique_ptr<MLModel> strategyModel_;
-    
     // Configuration parameters
-    const size_t MIN_TRAINING_SAMPLES = 1000;
     const double MAX_VENUE_EXPOSURE = 0.3;  // Maximum exposure per venue
     const double MIN_VENUE_WEIGHT = 0.1;    // Minimum weight per venue
     const double MAX_SLIPPAGE = 0.02;       // Maximum allowed slippage
